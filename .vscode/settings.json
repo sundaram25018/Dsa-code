@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "vector": "cpp",
+        "stack": "cpp",
+        "utility": "cpp",
+        "ostream": "cpp",
+        "queue": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Enabled",
+    "problems.showCurrentInStatus": false,
+    "markdown.experimental.validate.enabled": false
+}

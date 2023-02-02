@@ -131,6 +131,16 @@ while (temp != NULL)
 }
   return checkpallindrome(arr);
 }
+bool Searching(node* &head, int key){
+    node*temp = head;
+    while (temp!=NULL)
+    {
+        if(temp->data == key){
+            return true;
+        }
+    }
+    return false;
+}
 int main(){
     node*node1 = new node(1);
     node*head = node1;
@@ -142,17 +152,17 @@ int main(){
     insertHead(head, 1);
     insertHead(head, 1);
    
-    // cout<<getlength(head)<<endl;
-    // insertHead(head, 13);
-    // print(head);
-    // cout<<getlength(head)<<endl;
-    // insertTail(tail,28); 
-    // print(head);
-    // insertAtPosition(tail,head,2,45);
-    // print(head);
-    // insertAtPosition(tail,head,1,15);
-    // print(head);
-    // deletenode(3,head);
+    cout<<getlength(head)<<endl;
+    insertHead(head, 13);
+    print(head);
+    cout<<getlength(head)<<endl;
+    insertTail(tail,28); 
+    print(head);
+    insertAtPosition(tail,head,2,45);
+    print(head);
+    insertAtPosition(tail,head,1,15);
+    print(head);
+    deletenode(3,head);
     print(head);
     if(ispalindrome(head)){
         cout<<"this is  pallindrome "<<endl;
@@ -160,5 +170,7 @@ int main(){
     else{
         cout<<"this is not pllindrome "<<endl;
     }
+    Searching(head,15);
+    print(head);
     return 0;
 }

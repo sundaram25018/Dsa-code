@@ -63,28 +63,46 @@
 //     return 0;
 // }
 
-#include<iostream>
+// #include<iostream>
+// using namespace std;
+// float AreaOfcircle(int r){
+//     float ans = 3.14*r*r;
+//     return ans;
+// }
+// float Areaoftriangle(int b, int h){
+//     float ans = (0.5)*b*h;
+//     return ans;
+// }
+// float Areaofrectangle(int b, int h){
+//     int ans = b*h;
+//     return ans;
+// }
+// int main(){
+//     int r = 2;
+//     int l = 4;
+//     int b = 3;
+//     AreaOfcircle(r);
+//     Areaoftriangle(l,b);
+//     cout<<"Area of circle is "<< AreaOfcircle(r)<<endl;;
+//     cout<<"Area of triangle is "<<Areaoftriangle(l,b)<<endl;
+//     cout<<"Area of rectangle is "<<Areaofrectangle(l,b)<<endl;
+//     return 0;
+// }
+
+#include <iostream>
 using namespace std;
-float AreaOfcircle(int r){
-    float ans = 3.14*r*r;
-    return ans;
-}
-float Areaoftriangle(int b, int h){
-    float ans = (0.5)*b*h;
-    return ans;
-}
-float Areaofrectangle(int b, int h){
-    int ans = b*h;
-    return ans;
-}
-int main(){
-    int r = 2;
-    int l = 4;
-    int b = 3;
-    AreaOfcircle(r);
-    Areaoftriangle(l,b);
-    cout<<"Area of circle is "<< AreaOfcircle(r)<<endl;;
-    cout<<"Area of triangle is "<<Areaoftriangle(l,b)<<endl;
-    cout<<"Area of rectangle is "<<Areaofrectangle(l,b)<<endl;
+int main() {
+
+    int a = 0;
+    int b = 10;
+    a = 2;
+    b = 7;
+    if (a && b) {
+        cout << "true: " << endl;
+    }
+    else 
+    {
+        cout << "false: " << endl;
+    }
     return 0;
 }

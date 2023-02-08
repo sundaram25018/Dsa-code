@@ -35,6 +35,7 @@ node* buildTree(int preOrder[], int inOrder[], int start, int end){
         return Node;
     }
     int pos = search(inOrder,start,end,curr);
+
     Node -> left = buildTree(preOrder,inOrder,start, pos-1);
     Node -> right = buildTree(preOrder,inOrder,pos+1,end);
     return Node;
@@ -45,11 +46,10 @@ void display(node* root){
     }
         display(root->left);
         cout<<root->data<<" ";
-        display(root->right);
-    
+        display(root->right); 
 }
 int main(){
-    int preOrder[] = {1,2,4,3,5};
+    int preOrder[] ={1,2,4,3,5};
     int inOrder[] = {4,2,1,5,3};
 node*root = buildTree(preOrder,inOrder,0,4);
 display(root);

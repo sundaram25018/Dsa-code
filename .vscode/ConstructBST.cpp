@@ -30,8 +30,7 @@ node* ConstructBST(int preOrder[], int* preOrderIdx, int key, int min, int max, 
         }
         if(*preOrderIdx>n){
             root->right = ConstructBST(preOrder, preOrderIdx,preOrder[*preOrderIdx], key, max,n);
-        }
-        
+        }   
     }
     return root;
 }

@@ -39,7 +39,6 @@ int clacHeight(node* root){
     if(root == NULL){
         return 0;
     }
-    
     return max(clacHeight(root->left),clacHeight(root->right) + 1);
 }
 int calcDiameter(node* root){
@@ -70,7 +69,6 @@ void leafnode(node* root){
     if(root->right){
         leafnode(root->right);
     }
-   
 }
 int main(){
     node*root = new node(1);

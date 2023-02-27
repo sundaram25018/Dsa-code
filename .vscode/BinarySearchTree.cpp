@@ -59,7 +59,7 @@
 //         root->left = deleteInBST(root->left, key);
 //     }
 //     else if(key > root->data){
-//         root->right = deleteInBST(root->right);
+//         root->right = deleteInBST(root->right, key);
 //     }
 //     else{
 //         if(root->left == NULL){

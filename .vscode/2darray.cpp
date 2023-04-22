@@ -209,10 +209,10 @@ using namespace std;
 //         ans = ans^arr[i];
 //     }
     
-//     // for (int i = 1; i < n; i++)
-//     // {
-//     //     ans = ans^i;
-//     // }
+//     for (int i = 1; i < n; i++)
+//     {
+//         ans = ans^i;
+//     }
     
 //     return ans;
 // }
@@ -223,8 +223,8 @@ using namespace std;
 //     return 0;
 // }
 
-// #include<iostream>
-// using namespace std;
+#include<iostream>
+using namespace std;
 // int Intersection(int arr[], int arr2[], int n1, int n2){
 //     int num;
 //     for (int i = 0; i < n1; i++)
@@ -242,11 +242,29 @@ using namespace std;
 //     }
 //  return num;   
 // }
-// int main(){
-//     int arr[] = {1,2,3,5,3};
-//     int arr2[] = {3,4};
-//     int n1 = 5;
-//     int n2 = 2;
-//     cout<<Intersection(arr,arr2,n1,n2)<<endl;
-//     return 0;
-// }
+int Intersection(int arr1[], int arr2[], int n, int m){
+    int  i =0, j = 0;
+    int ans;
+    while(i<n && j<m){
+        if(arr1[i]==arr2[j]){
+            ans = arr1[i];
+            i++;
+            j++;
+        }
+        if(arr1[i]<arr2[j]){
+            i++;
+        }
+        else{
+            j++;
+        }
+    }
+    return ans;
+}
+int main(){
+    int arr[] = {1,2,3,5,3};
+    int arr2[] = {3,4};
+    int n = 5;
+    int m = 2;
+    cout<<Intersection(arr,arr2,n,m)<<endl;
+    return 0;
+}

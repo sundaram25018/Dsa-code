@@ -48,7 +48,7 @@ int main(){
     {
         {1, 0, 0},
         {1, 1, 0},
-        {0, 1, 1}
+        {1, 1, 1}
     };
     int n = 3;
     searchinmaze(vect, n);

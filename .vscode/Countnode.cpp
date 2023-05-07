@@ -26,21 +26,24 @@ public:
 //     }
 //     return SumOfNode(root->left) + SumOfNode(root->right) + root->data;
 // }
-// int clacHeight(node* root){
-//     if(root == NULL){
-//         return 0;
-//     }
-//     int lheight = clacHeight(root->left);
-//     int rheight = clacHeight(root->right);
-//     return max(lheight, rheight) + 1;
-// }
-
 int clacHeight(node* root){
     if(root == NULL){
         return 0;
     }
-    return max(clacHeight(root->left),clacHeight(root->right) + 1);
+    int lheight = clacHeight(root->left);
+    
+    int rheight = clacHeight(root->right);
+  
+    
+    return max(lheight, rheight) + 1;
 }
+
+// int clacHeight(node* root){
+//     if(root == NULL){
+//         return 0;
+//     }
+//     return max(clacHeight(root->left),clacHeight(root->right) + 1);
+// }
 int calcDiameter(node* root){
     if(root == NULL){
         return 0;
@@ -80,8 +83,8 @@ int main(){
         root->right->right = new node(7);
         // cout<<countNode(root)<<endl;;
         // cout<<SumOfNode(root);
-    //     cout<<clacHeight(root);
-    cout<<calcDiameter(root)<<endl;
-    leafnode(root);
+        cout<<clacHeight(root);
+    // cout<<calcDiameter(root)<<endl;
+    // leafnode(root);
     return 0;
 }

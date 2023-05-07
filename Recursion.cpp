@@ -26,7 +26,7 @@
 
 #include<iostream>
 using namespace std;
-int power(int n){
+double power(int n){
     if(n==0){
         return 1;
     }
@@ -34,8 +34,14 @@ int power(int n){
     // int smaller = power(n-1);
     // int bigger = 2*smaller;
     // return bigger;
-
-    return 2*power(n-1);
+     if(n < 0){
+       double ans =  1/(2*power(abs(n)-1));
+       return ans;
+     }
+     else{
+           return 2*power(n-1);
+     }
+    
 }
 int main(){
     int n;

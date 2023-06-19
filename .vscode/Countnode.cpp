@@ -79,12 +79,32 @@ int main(){
     root->right = new node(3);
      root->left->left = new node(4);
       root->left->right = new node(5);
-       root->right->left = new node(6);
-        root->right->right = new node(7);
+       
         // cout<<countNode(root)<<endl;;
         // cout<<SumOfNode(root);
         cout<<clacHeight(root);
-    // cout<<calcDiameter(root)<<endl;
+    cout<<calcDiameter(root)<<endl;
     // leafnode(root);
     return 0;
 }
+
+//   int diameterOfBinaryTree(node* root) {
+//         if(root == NULL){
+//             return 0;
+//         }
+
+//         int dia = 0;
+//         height(root, dia);
+//         return dia;
+//     }
+
+    // int height(TreeNode* node, int &dia){
+    //     if(!node){
+    //         return 0;
+    //     }
+
+    //     int lh = height(node->left, dia);
+    //     int rh = height(node->right, dia);
+    //     dia  = max(dia, lh+rh);
+        
+    //     return 1 + max(lh, rh);

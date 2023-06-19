@@ -14,21 +14,26 @@ public:
         this->right = NULL;
     }
 };
-bool isBST(node* root, node* min=NULL, node* max=NULL){
+bool isBST(node* root, int min=NULL, int max=NULL){
     if (root == NULL)
     {
         return true;
     }
     
-if(min!= NULL && root->data <= min->data){
+// if(min!= NULL && root->data <= min->data){
+//     return false;
+// }
+// if(max!= NULL && root->data >= max->data){
+//     return false;
+// }
+if(root->data >= min && root->data <= max){
+    bool leftValid = isBST(root->left, min, root->data);
+    bool rightValid = isBST(root->right, root->data, max);
+    return leftValid && rightValid;
+}
+else{
     return false;
 }
-if(max!= NULL && root->data >= max->data){
-    return false;
-}
-bool leftValid = isBST(root->left, min, root);
-bool rightValid = isBST(root->right, root, max);
-return leftValid && rightValid;
 }
 int main(){
     node* root1 = new node(5);

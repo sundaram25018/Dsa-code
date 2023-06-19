@@ -17,7 +17,7 @@ while (s<e)
   return s;
 }
 int main(){
-    int num[5] = {1,3,5,2,0};
-    cout<<"hight number will be on index"<<mountainarrey(num,5)<<endl;
+    int num[6] = {1,3,5,2,0,1};
+    cout<<"hight number will be on index"<<mountainarrey(num,6)<<endl;
         return 0;
 }

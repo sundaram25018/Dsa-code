@@ -33,8 +33,8 @@ void preOrder(node* root){
     preOrder(root->right); 
 }
 int main(){
-    int arr[] = {10, 20, 30, 40, 50};
-    node* root = sortedArrayBST(arr, 0, 4);
+    int arr[] = {10, 20, 30, 40, 50,60};
+    node* root = sortedArrayBST(arr, 0, 5);
     preOrder(root);
     cout<<endl;
     return 0;

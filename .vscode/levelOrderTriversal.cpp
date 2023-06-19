@@ -15,32 +15,37 @@ public:
         this->right = NULL;
     }
 };
-// void levelOrder(node*root){
-//     if(root == NULL){
-//         return;
-//     }
-//     queue<node*>q;
-//    q.push(root);
-//    q.push(NULL);
-//    while (!q.empty()){
-//        node* Node = q.front();
-//        q.pop();
-//        if(Node != NULL){
-//            cout<<Node->data<<" ";
-//            if(Node->left){
-//                q.push(Node->left);
-//            }
-//             if(Node->right){
-//                q.push(Node->right);
-//            }
-//            else if(!q.empty()){
-//                q.push(NULL);
-//            }
-//        }
-//    }
+void levelOrder(node*root){
+    if(root == NULL){
+        return;
+    }
+    queue<node*>q;
+   q.push(root);
+   q.push(NULL);
+   while (!q.empty()){
+       node* Node = q.front();
+       q.pop();
+       if(Node != NULL){
+           cout<<Node->data<<" ";
+           if(Node->left){
+               q.push(Node->left);
+           }
+            if(Node->right){
+               q.push(Node->right);
+           }
+           else if(!q.empty()){
+               q.push(NULL);
+           }
+       }
+   }
    
-// }
+}
+void reverse(node* root){
+    if(root == NULL){
+        return;
+    }
 
+}
 void printLevelOrder(node* root)
 {
     // Base Case
@@ -66,42 +71,43 @@ void printLevelOrder(node* root)
         /*Enqueue right child */
         if (Node->right != NULL)
             q.push(Node->right);
+        
     }
 }
-// int sumAtk( node* root, int k){
-//     if(root == NULL){
-//         return -1;
-//     }
-//     queue<node*>q;
-//     q.push(root);
-//     q.push(NULL);
-//     int level = 0;
-//     int sum = 0;
+int sumAtk( node* root, int k){
+    if(root == NULL){
+        return -1;
+    }
+    queue<node*>q;
+    q.push(root);
+    q.push(NULL);
+    int level = 0;
+    int sum = 0;
 
-//     while (!q.empty()){
-//         node* Node = q.front();
-//         q.pop();
+    while (!q.empty()){
+        node* Node = q.front();
+        q.pop();
     
-//     if(Node!= NULL){
-// if(level == k){
-//     sum += Node->data;
-// }
-//   if(Node->left){
-//                q.push(Node->left);
-//            }
-//             if(Node->right){
-//                q.push(Node->right);
-//            }
+    if(Node!= NULL){
+if(level == k){
+    sum += Node->data;
+}
+  if(Node->left){
+               q.push(Node->left);
+           }
+            if(Node->right){
+               q.push(Node->right);
+           }
             
-//            }
-//            else if(!q.empty()){
-//                q.push(NULL);
-//                level++;
-//     }
+           }
+           else if(!q.empty()){
+               q.push(NULL);
+               level++;
+    }
     
-//     }   
-// return sum;
-// }
+    }   
+return sum;
+}
 int main(){
     node*root = new node(1);
     root->left = new node(2);
@@ -111,7 +117,7 @@ int main(){
        root->right->left = new node(6);
         root->right->right = new node(7);
         // levelOrder(root);
-        printLevelOrder(root);
-        // cout<<sumAtk(root, 1)<<endl;
+        // printLevelOrder(root);
+        cout<<sumAtk(root, 1)<<endl;
     return 0;
 }

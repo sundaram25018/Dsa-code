@@ -5,7 +5,8 @@
         "stack": "cpp",
         "utility": "cpp",
         "ostream": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "map": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled",
     "problems.showCurrentInStatus": false,

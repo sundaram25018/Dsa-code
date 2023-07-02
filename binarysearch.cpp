@@ -24,8 +24,10 @@ int binarySearch(int arr[],int size,int key){
 int main(){
     int even[6] = {1,3,4,6,7,9};
     int odd[5] = {2,6,9,10,23};
-    int index = binarySearch(even,6,7);
+    int index = binarySearch(even,6,11);
     cout<<"Index of 6 is : "<<index<<endl;
+    int  i = 1000000;
+    cout<<i;
     
     return 0;
 }

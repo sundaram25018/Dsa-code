@@ -45,8 +45,8 @@ int lastocc(int arr[], int n,int key){
    return ans;
 }
 int main(){
-    int even[6] = {5,7,7,8,8,10};
-    cout<<"first occurance of key is in index "<<firstocc(even,6,8)<<endl;;
-       cout<<"last occurance of key is in index "<<lastocc(even,6,8); 
+    int even[6] = {5,7,7,8,10,10};
+    cout<<"first occurance of key is in index "<<firstocc(even,6,10)<<endl;;
+       cout<<"last occurance of key is in index "<<lastocc(even,6,10); 
     return 0;
 }

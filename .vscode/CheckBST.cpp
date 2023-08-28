@@ -14,7 +14,7 @@ public:
         this->right = NULL;
     }
 };
-bool isBST(node* root, int min=NULL, int max=NULL){
+bool isBST(node* root, int min, int max){
     if (root == NULL)
     {
         return true;
@@ -35,11 +35,14 @@ else{
     return false;
 }
 }
+bool validbst(node* root){
+    return isBST(root, INT32_MIN, INT32_MAX);
+}
 int main(){
     node* root1 = new node(5);
     root1->left = new node(2);
     root1->right = new node(6);
-    if(isBST(root1, NULL,NULL)){
+    if(validbst(root1)){
         cout<<"valid BST"<<endl;
     }
     else{

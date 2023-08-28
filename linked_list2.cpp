@@ -141,6 +141,23 @@ bool Searching(node* &head, int key){
     }
     return false;
 }
+node* lasttofirst(node* &head){
+    node* temp = head;
+    node* prev = NULL;
+    while(temp!=NULL){
+        if(temp->next == NULL){
+            temp->next = head;
+            prev->next = NULL;
+        }
+        prev = temp;
+        temp = temp->next;
+        
+    }
+    return temp;
+}
+node* removedubblicate(node* &head){
+    
+}
 int main(){
     node*node1 = new node(1);
     node*head = node1;
@@ -148,29 +165,31 @@ int main(){
     print(head); 
     insertHead(head, 2);
     insertHead(head, 3);
-    insertHead(head, 2);
     insertHead(head, 1);
+    insertHead(head, 5);
     insertHead(head, 1);
+     insertHead(head, 2);
    
-    cout<<getlength(head)<<endl;
-    insertHead(head, 13);
-    print(head);
-    cout<<getlength(head)<<endl;
-    insertTail(tail,28); 
-    print(head);
-    insertAtPosition(tail,head,2,45);
-    print(head);
-    insertAtPosition(tail,head,1,15);
-    print(head);
-    deletenode(3,head);
-    print(head);
-    if(ispalindrome(head)){
-        cout<<"this is  pallindrome "<<endl;
-    }
-    else{
-        cout<<"this is not pllindrome "<<endl;
-    }
-    Searching(head,15);
+    // cout<<getlength(head)<<endl;
+    // insertHead(head, 13);
+    // print(head);
+    // cout<<getlength(head)<<endl;
+    // insertTail(tail,28); 
+    // print(head);
+    // insertAtPosition(tail,head,2,45);
+    // print(head);
+    // insertAtPosition(tail,head,1,15);
+    // print(head);
+    // deletenode(3,head);
+    // print(head);
+    node* newone = lasttofirst(head);
+    // if(ispalindrome(head)){
+    //     cout<<"this is  pallindrome "<<endl;
+    // }
+    // else{
+    //     cout<<"this is not pllindrome "<<endl;
+    // }
+    // Searching(head,15);
     print(head);
     return 0;
 }

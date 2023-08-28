@@ -71,6 +71,7 @@ bool detectLoop(node* head){
     }
    return false;   
 }
+
 node* floydDetectLoop(node* head){
     if(head == NULL){
         return NULL;

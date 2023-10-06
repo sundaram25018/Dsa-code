@@ -126,7 +126,7 @@ return curr;
 //             return temp;
 //         }
 //         else if(root->right == NULL){
-//  node* temp = root->right;
+//  node* temp = root->left;
 //             free(root);
 //             return temp;
 //         }

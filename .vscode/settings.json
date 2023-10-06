@@ -6,7 +6,8 @@
         "utility": "cpp",
         "ostream": "cpp",
         "queue": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "unordered_map": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled",
     "problems.showCurrentInStatus": false,

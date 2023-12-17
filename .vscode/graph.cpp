@@ -1,6 +1,7 @@
 #include<iostream>
 #include<unordered_map>
 #include<list>
+#include<vector>
 using namespace std;
 template <typename T>
 class graph{

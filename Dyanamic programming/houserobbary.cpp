@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 int maximumsum(vector<int>&arr){
     int n = arr.size();
@@ -15,17 +16,17 @@ int maximumsum(vector<int>&arr){
     return prev1;
 }
 int houserobbery(vector<int>&vec){
-    int n = arr.size();
+    int n = vec.size();
     if(n==1){
-        return arr[0];
+        return vec[0];
     }
     vector<int>first, second;
     for(int i=0; i<n; i++){
         if(i!=n-1){
-            first.push_back(arr[i]);
+            first.push_back(vec[i]);
         }
         if(i!=0){
-            second.push_back(arr[i]);
+            second.push_back(vec[i]);
         }
     }
     return max(maximumsum(first), maximumsum(second));

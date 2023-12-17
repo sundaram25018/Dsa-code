@@ -32,7 +32,7 @@ void heapsort(int arr[], int n){
     }
 }
 int main(){
-    int arr[] = {4,3,6,8,1,2};
+  int arr[] = {4,3,6,8,1,2};
     int size = sizeof(arr)/sizeof(arr[0]);
     heapsort(arr, size);
     for(int  i = 0; i<size; i++){

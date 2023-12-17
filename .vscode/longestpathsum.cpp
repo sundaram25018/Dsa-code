@@ -91,11 +91,11 @@ int main(){
     root->left->right = new node(5);
     root->right->left = new node(6);
     root->right->right = new node(7);
-    cout<<longestpathsum(root);
-    // int n1 = 5;
-    // int n2 = 6;
-    // node* ans = LCA(root, n1, n2);
-    cout<<kthsum(root, 7);
+    // cout<<longestpathsum(root);
+    int n1 = 4;
+    int n2 = 6;
+    node* ans = LCA(root, n1, n2);
+    // cout<<kthsum(root, 7);
 
     return 0;
 }

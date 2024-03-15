@@ -37,10 +37,7 @@ void traverseRight(node* root, vector<int>&ans){
     }
     else{
        traverseLeft(root->left, ans);
-    }
-   
-    
-    
+    }  
 }
 vector<int>TopView(node* root){
     vector<int>ans;

@@ -1,5 +1,7 @@
 #include<iostream>
 #include<utility>
+#include<vector>
+#include<queue>
 using namespace std;
 class node{
     public:
@@ -139,6 +141,26 @@ pair<int, int> fasth(node* root){
 int diameter(node* root){
     return fasth(root).first;
 }
+void solution(node* root,vector<int>& ans, int d){
+    if(root == NULL){
+        return;
+    }
+    if(d==ans.size()){
+        ans.push_back(root->data);
+    }
+    else{
+        ans[d] = max(ans[d], root->data);
+    }
+    solution(root->left, ans, d+1);
+    solution(root->right, ans, d+1);
+
+
+}
+vector<int>maximumAtlayer(node* root){
+     vector<int>ans;
+     solution(root,ans, 0);
+     return ans;
+}
 int main(){
     node* root = new node(1);
     root->left = new node(2);
@@ -171,6 +193,12 @@ int main(){
     }
     cout<<diameter(root);
     cout<<maximum(root)<<endl;
+
+    cout<<"maximum at each level"<<endl;
+    vector<int>res = maximumAtlayer(root);
+    for(int i = 0; i < res.size(); i++){
+        cout<<res[i]<<" ";
+    }
 
     return 0;
 }
